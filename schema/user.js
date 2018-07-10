@@ -14,24 +14,10 @@ var userSchema = new Schema({
 		type : String,
 		required : true
 	},
-	admin : Boolean,
-	location : String,
-	meta : {
-		age : Number,
-		email : String,
-		website : String,
-		contact : String
-	},
-	deleted : { type:Boolean, required:true, default:false},
-	create_date : { type: Number, required: true, default : new Date().getTime()},
-	update_date : { type: Number, required: true, default : new Date().getTime()},
+	email : String,
+	contact : String
 });
 
-userSchema.pre('save', function(next) {
-	this.create_date = new Date().getTime();
-	this.update_date = new Date().getTime();
-	next();
-});
 
 // the schema is useless so far
 // we need to create a model using it
