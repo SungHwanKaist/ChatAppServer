@@ -57,7 +57,7 @@ if ('development' == app.get('env')) {
 console.log("trying to make connection with mongodb");
 // Using `mongoose.connect`...
 mongoose.Promise = global.Promise;
-var promise = mongoose.connect('mongodb://52.231.66.86/socketchat', {
+var promise = mongoose.connect('mongodb://localhost/socketchat', {
   useMongoClient: true,
   /* other options */
 });
