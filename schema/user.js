@@ -4,8 +4,8 @@ var ObjectId = Schema.ObjectId;
 
 // create a schema
 var userSchema = new Schema({
-	name : String,
-	username : {
+	nickname : String,
+	userid : {
 		type : String,
 		required : true,
 		unique : true
