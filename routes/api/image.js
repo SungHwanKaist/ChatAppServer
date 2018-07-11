@@ -13,9 +13,9 @@ exports.add = function(req, res) {
 	image.save(function(err) {
 		if (err) {
 			console.error(err);
-			res.json(response.createResponse(response.FAILED,"Failed to save user!"));
+			res.json(response.createResponse(response.FAILED,"Failed to save image!"));
 		} else {
-			res.json(response.createResponse(response.SUCCESS, "User saved!!"));
+			res.json(response.createResponse(response.SUCCESS, "Image saved!!"));
 		}
 	});
 };
@@ -43,7 +43,7 @@ exports.getAll = function(req, res) {
 						"Data found!!", data));
 			} else {
 				res.json(response.createResponse(response.FAILED,
-						"User not found!!"));
+						"Image not found!!"));
 			}
 		});
 	} else {
