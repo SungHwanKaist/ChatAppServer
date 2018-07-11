@@ -7,6 +7,7 @@ exports.list = function(req, res){
   res.send("respond with a resource");
 };
 
+/*
 module.exports = function(express, user)
 {
     express.post('api/user', function(req, res){
@@ -28,3 +29,4 @@ module.exports = function(express, user)
         });
     });
 }
+*/
