@@ -80,6 +80,7 @@ app.get('/api', apis.index);
 var userApi = require('./routes/api/user');
 var chatApi = require('./routes/api/chat');
 var contactApi = require('./routes/api/contact');
+var imageApi = require('./routes/api/image');
 
 app.post("/api/login",userApi.login);
 
@@ -99,6 +100,8 @@ app.get("/api/message",messageApi.messageList);
 app.post("/api/message",upload.single("image"),messageApi.sendPictureMessage);
 
 
+app.post("/api/image",imageApi.add);
+app.get("/api/image",imageApi.getAll);
 
 io.sockets.on('connection', function(socket){
 	
