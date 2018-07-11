@@ -6,7 +6,7 @@ exports.add = function(req, res) {
 	var username = req.body.username;
 	var img = req.body.img;
 
-	image.save(function(err) {
+	Image.save(function(err) {
 		if (err) {
 			console.error(err);
 			res.json(response.createResponse(response.FAILED,"Failed to save user!"));
