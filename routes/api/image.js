@@ -1,6 +1,7 @@
 var User = require('../.././schema/user');
 var Image = require('../.././schema/image');
 var response = require('./response');
+var AppUtil = require('../.././utils/AppUtil');
 
 exports.add = function(req, res) {
 	var username = req.body.username;
