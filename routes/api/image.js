@@ -5,8 +5,12 @@ var response = require('./response');
 exports.add = function(req, res) {
 	var username = req.body.username;
 	var img = req.body.img;
+	var image = new Image({
+							username : username,
+							img : img
+						});
 
-	Image.save(function(err) {
+	image.save(function(err) {
 		if (err) {
 			console.error(err);
 			res.json(response.createResponse(response.FAILED,"Failed to save user!"));
