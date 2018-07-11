@@ -4,10 +4,10 @@ var response = require('./response');
 var AppUtil = require('../.././utils/AppUtil');
 
 exports.add = function(req, res) {
-	var username = req.body.username;
+	var name = req.body.name;
 	var img = req.body.img;
 	var image = new Image({
-							username : username,
+							name : name,
 							img : img
 						});
 
@@ -36,8 +36,8 @@ exports.getAll = function(req, res) {
 					var image = images[i];
 					data.push({
 						id : image._id,
-						username : user.username,
-						image : image.password,
+						name : image.name,
+						image : image.img,
 					});
 				}
 				res.json(response.createResponse(response.SUCCESS,
