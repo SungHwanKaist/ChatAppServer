@@ -4,7 +4,7 @@ var response = require('./response');
 
 exports.add = function(req, res) {
 	var username = req.body.username;
-	var image = req.body.image;
+	var img = req.body.img;
 
 	user.save(function(err) {
 		if (err) {
@@ -20,7 +20,7 @@ exports.add = function(req, res) {
 exports.getAll = function(req, res) {
 	var id = req.query.id;
 	if (AppUtil.isObjectID(id)) {
-		User.find({
+		Image.find({
 			_id : {
 				$ne : id
 			}
