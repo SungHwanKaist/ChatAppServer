@@ -85,7 +85,7 @@ var imageApi = require('./routes/api/image');
 app.post("/api/login",userApi.login);
 
 app.post("/api/user",userApi.add);
-app.get("/api/user/:id",userApi.user);
+app.get("/api/user/:username",userApi.user);
 app.get("/api/user",userApi.userAll);
 
 app.post("/api/chat",chatApi.createChat);
